@@ -6,6 +6,7 @@ const Header: React.FC = () => {
     <>
       <Home></Home>
       <div className="hero">
+        <div className="gradient absolute"></div>
         <header className="absolute inset-x-0 top-0 z-50 flex">
           <div className="circle absolute ml-48  "></div>
           <div className="square absolute ml-80 mt-48 "></div>
