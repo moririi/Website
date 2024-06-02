@@ -1,22 +1,45 @@
 
 
 .hero {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; 
-    color: white;
-    text-align: center;
-    overflow: hidden;
-    background-color:#080808;
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat;
-    place-content: center;
-    align-items: center;
-    overflow: visible;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  background-color:#080808;
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  place-content: center;
+  overflow: visible;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+  animation-delay: 0.1s; /* Match this delay to the loading timeout */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
   }
+}
+
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
 
   .content {
     position: relative;
@@ -42,14 +65,14 @@
     height: 300px; 
     background-color: #18bd09ce; 
     border-radius: 50%; 
-    /* filter: blur(180px); */
+    filter: blur(180px);
   }
 
   .square {
     width: 310px;
     height: 300px;
     background-color: #9c10a8;
-    /* filter: blur(200px); */
+    filter: blur(200px);
   }
   .square2 {
     top: 0; 
@@ -57,7 +80,7 @@
     width: 310px;
     height: 300px;
     background-color: #fdf900;
-    /* filter: blur(200px); */
+    filter: blur(200px);
   }
   @keyframes rotate {
     0% {

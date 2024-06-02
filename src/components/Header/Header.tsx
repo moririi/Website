@@ -1,15 +1,24 @@
 import "./Header.css";
-import Home from "./Gif";
-import React from "react";
+// import Home from "./Gif";
 const Header: React.FC = () => {
+  // const [loading, setLoading] = useState(true);
+
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setLoading(false);
+  //   }, 1000);
+
+  //   return () => clearTimeout(timer);
+  // }, []);
+
   return (
     <>
-      <Home></Home>
+      {/* <Home /> */}
       <div className="hero">
         <div className="gradient absolute"></div>
         <header className="absolute inset-x-0 top-0 z-50 flex">
-          <div className="circle absolute ml-48  "></div>
-          <div className="square absolute ml-80 mt-48 "></div>
+          <div className="circle absolute ml-48"></div>
+          <div className="square absolute ml-80 mt-48"></div>
           <div className="square2 absolute mr-36 mt-28"></div>
         </header>
         <div className="content">
@@ -26,4 +35,5 @@ const Header: React.FC = () => {
     </>
   );
 };
+
 export default Header;
