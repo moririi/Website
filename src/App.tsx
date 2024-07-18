@@ -1,4 +1,4 @@
-import Header from "./components/Header/Header";
+// import Header from "./components/Header/Header";
 import "./App.css";
 import { useState, useEffect } from "react";
 import Loading from "./components/Header/Loading";
