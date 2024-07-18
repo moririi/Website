@@ -1,16 +1,6 @@
 import "./Header.css";
 // import Home from "./Gif";
 const Header: React.FC = () => {
-  // const [loading, setLoading] = useState(true);
-
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setLoading(false);
-  //   }, 1000);
-
-  //   return () => clearTimeout(timer);
-  // }, []);
-
   return (
     <>
       {/* <Home /> */}
