@@ -50,7 +50,7 @@
   }
 
 
-  /* Corner shapes */
+  /* Corner shapes
   .triangle {
     width: 0; 
     height: 0;
@@ -82,7 +82,7 @@
     height: 300px;
     background-color: #fdf900;
     filter: blur(200px);
-  }
+  } */
 
   * {
     transition: all 0.5s ease-out;

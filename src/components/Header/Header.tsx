@@ -12,7 +12,7 @@ const Header: React.FC = () => {
           <div className="square2 absolute mr-36 mt-28"></div>
         </header>
         <div className="content">
-          <h1>こんにちわ!</h1>
+          <h1>Hey! I'm <span style={{ color: 'mediumorchid' }}>Shinji Morikage</span></h1>
           <h2>
             I'm an aspiring{" "}
             <span className="highlight">Software Developer</span>

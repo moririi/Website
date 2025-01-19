@@ -4,7 +4,7 @@ import { cn } from "../../lib/utils";
 
 export const FlipWords = ({
   words,
-  duration = 2000,
+  duration = 3500,
   className,
 }: {
   words: string[];
@@ -21,10 +21,12 @@ export const FlipWords = ({
   }, [currentWordIndex, words.length]);
 
   useEffect(() => {
-    if (!isAnimating)
-      setTimeout(() => {
+    if (!isAnimating) {
+      const timer = setTimeout(() => {
         startAnimation();
       }, duration);
+      return () => clearTimeout(timer);
+    }
   }, [isAnimating, duration, startAnimation]);
 
   return (
@@ -61,11 +63,11 @@ export const FlipWords = ({
           "z-10 inline-block relative text-left text-neutral-900 dark:text-neutral-100 px-2",
           className
         )}
-        key={words[currentWordIndex]} // Use word as key
+        key={words[currentWordIndex]}
       >
         {words[currentWordIndex].split("").map((letter, index) => (
           <motion.span
-            key={words[currentWordIndex] + index} // Unique key for each letter
+            key={`${currentWordIndex}-${index}`}
             initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{
@@ -74,21 +76,9 @@ export const FlipWords = ({
             }}
             className="inline-block"
           >
-            {letter}
+            {letter === " " ? "\u00A0" : letter} {/* Handle spaces */}
           </motion.span>
         ))}
-        <motion.span
-          key={words[currentWordIndex] + "space"} // Unique key for the space
-          initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
-          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{
-            delay: words[currentWordIndex].length * 0.08, // Delay based on word length
-            duration: 0.4,
-          }}
-          className="inline-block"
-        >
-          {"\u00A0"}
-        </motion.span>
       </motion.div>
     </AnimatePresence>
   );

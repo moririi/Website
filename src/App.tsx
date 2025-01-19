@@ -3,7 +3,7 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import Loading from "./components/Header/Loading";
 import { CSSTransition } from "react-transition-group";
-import { BackgroundGradientAnimation } from "./components/Header/BackgroundAnim";
+import { AuroraBackgroundDemo } from "./components/Header/MainBackgroundAnim";
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -38,7 +38,8 @@ export default function App() {
   return (
     <div>
       {/* <Header /> */}
-      <BackgroundGradientAnimation />
+
+      <AuroraBackgroundDemo />
     </div>
   );
 }
