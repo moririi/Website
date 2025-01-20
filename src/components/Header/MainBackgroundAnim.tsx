@@ -20,12 +20,14 @@ export function AuroraBackgroundDemo() {
         className="relative flex flex-col gap-4 items-center justify-center px-4"
       >
         <div className="text-3xl md:text-7xl font-bold dark:text-white text-center">
-        <h1>Hey! I'm <span style={{ color: 'mediumorchid' }}>Shinji Morikage</span></h1>
+        <h1> 
+            <span style={{ color: 'white' }}>Hey! I'm </span>
+            <span style={{ color: 'mediumorchid' }}>Shinji Morikage</span></h1>
         </div>
         <div className="font-extralight text-base md:text-4xl dark:text-neutral-200 py-4">
-        <h2>
-            <FlipWords words={words} /> <br />
-          </h2>
+         <h2>
+             <FlipWords words={words} className="text-white" />
+            </h2>
         </div>
         
       </motion.div>

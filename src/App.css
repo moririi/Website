@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    background-color: black;
+    color: white; /* Ensure text is visible on a black background */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    height: 100vh; /* Ensure it spans the full viewport */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
