@@ -1,6 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
 // import React from "react";
+import "./ScrollingIcon.css";
+import ScrollIcon from "./Scroll";
 import { AuroraBackground } from "./BackgroundAnim";
 import { FlipWords } from "./FlipWord";
 const words = [
@@ -9,8 +11,6 @@ const words = [
   "A Gym Goer",
   "An Anime Enthusiast",
 ];
-import "./ScrollingIcon.css";
-
 export function AuroraBackgroundDemo() {
   return (
     <AuroraBackground>
@@ -42,6 +42,7 @@ export function AuroraBackgroundDemo() {
           <div className="chevrondown"></div>
         </div>
       </div>
+      <ScrollIcon />
     </AuroraBackground>
   );
 }

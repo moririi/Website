@@ -5,6 +5,7 @@ import Loading from "./components/Header/Loading";
 import { CSSTransition } from "react-transition-group";
 import { AuroraBackgroundDemo } from "./components/Header/MainBackgroundAnim";
 import { AboutMe } from "./components/Introduction/Introduction";
+
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -39,7 +40,6 @@ export default function App() {
   return (
     <div>
       {/* <Header /> */}
-
       <AuroraBackgroundDemo />
       <AboutMe />
     </div>
