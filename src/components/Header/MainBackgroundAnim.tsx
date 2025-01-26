@@ -36,12 +36,6 @@ export function AuroraBackgroundDemo() {
           </h2>
         </div>
       </motion.div>
-      <div className="scrolldown">
-        <div className="chevrons">
-          <div className="chevrondown"></div>
-          <div className="chevrondown"></div>
-        </div>
-      </div>
       <ScrollIcon />
     </AuroraBackground>
   );

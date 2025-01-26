@@ -21,7 +21,7 @@ const ScrollIcon: React.FC = () => {
   return (
     showIcon && (
       <div className="scrolldown">
-        <div className="chevrons">
+        <div className="chevrons self-center">
           <div className="chevrondown"></div>
           <div className="chevrondown"></div>
         </div>
