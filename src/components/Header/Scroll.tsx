@@ -1,4 +1,4 @@
-import "./Scroll.css";
+import "./ScrollingIcon.css";
 import React, { useState, useEffect } from "react";
 
 const ScrollIcon: React.FC = () => {
@@ -6,7 +6,7 @@ const ScrollIcon: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 50) {
         setShowIcon(false); // Hide icon after scrolling down
       } else {
         setShowIcon(true); // Show icon when at the top
