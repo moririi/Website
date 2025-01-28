@@ -1,0 +1,25 @@
+/* Not sure if this is needed, can be deleted supposedly to help with offloading and increase performance */
+.aurora-background {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    opacity: 0.5;
+    will-change: transform;
+    filter: blur(10px);
+    mask-image: radial-gradient(ellipse at 100% 0%, black 10%, transparent 70%);
+    background-image: 
+      repeating-linear-gradient(100deg, var(--blue-500) 10%, var(--indigo-300) 15%, var(--blue-300) 20%, var(--violet-200) 25%, var(--blue-400) 30%);
+    background-size: 300%, 200%;
+    background-position: 50% 50%, 50% 50%;
+    animation: aurora-move 15s infinite alternate ease-in-out;
+}
+
+@keyframes aurora-move {
+    0% {
+        background-position: 40% 50%, 50% 50%;
+    }
+    100% {
+        background-position: 60% 50%, 50% 50%;
+    }
+}

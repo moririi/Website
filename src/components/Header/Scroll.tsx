@@ -2,31 +2,30 @@ import "./ScrollingIcon.css";
 import React, { useState, useEffect } from "react";
 
 const ScrollIcon: React.FC = () => {
-  const [showIcon, setShowIcon] = useState(true);
+  const [opacity, setOpacity] = useState(1);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setShowIcon(false); // Hide icon after scrolling down
-      } else {
-        setShowIcon(true); // Show icon when at the top
-      }
+      const scrollY = window.scrollY;
+      const maxScroll = 100; // Adjust this value to control fade speed
+      const newOpacity = Math.max(1 - scrollY / maxScroll, 0);
+      setOpacity(newOpacity);
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    showIcon && (
-      <div className="scrolldown">
-        <div className="chevrons self-center">
-          <div className="chevrondown"></div>
-          <div className="chevrondown"></div>
-        </div>
+    <div
+      className="scrolldown"
+      style={{ opacity, transition: "opacity 0.3s ease-out" }}
+    >
+      <div className="chevrons self-center">
+        <div className="chevrondown"></div>
+        <div className="chevrondown"></div>
       </div>
-    )
+    </div>
   );
 };
 
