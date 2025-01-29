@@ -8,6 +8,13 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      fontFamily: {
+        courgette: ["Courgette", "cursive"], // Add Courgette font
+        extralight: ["Inter", "sans-serif"], // Extralight weight font
+      },
+      fontWeight: {
+        extralight: "200", // Extralight weight
+      },
       animation: {
         aurora: "aurora 60s linear infinite",
       },

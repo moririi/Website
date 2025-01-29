@@ -3,7 +3,7 @@ import "./Introduction.css";
 export const AboutMe: React.FC = () => {
   return (
     <div className="about-me-container">
-      <h1 className="about-me-title">About Me</h1>
+      <h1 style={{ fontFamily: "Courgette, cursive", color: "mediumorchid" }} className="about-me-title">About Me</h1>
       <div className="about-me-content">
         <img src="/me2.jpg" className="about-me-image" alt="Profile" />
         <p className="about-me-text font-extralight text-xl">

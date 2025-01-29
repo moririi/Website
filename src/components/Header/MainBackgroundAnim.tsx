@@ -6,6 +6,7 @@ import ScrollIcon from "./Scroll";
 import { AuroraBackground } from "./BackgroundAnim";
 import { FlipWords } from "./FlipWord";
 import "./BackgroundAnim.css";
+
 const words = [
   "An Aspiring Software Engineer",
   "A Food Lover",
@@ -40,10 +41,10 @@ export function AuroraBackgroundDemo() {
         }}
         className="relative flex flex-col gap-4 items-center justify-center px-4"
       >
-        <div className="text-3xl md:text-7xl font-extralight dark:text-white text-center">
+        <div className="text-3xl md:text-7xl dark:text-white text-center">
           <h1>
-            <span style={{ color: "white" }}>Hey! I'm </span>
-            <span style={{ color: "mediumorchid" }}>Lorem ipsum</span>
+            <span className="font-extralight text-white">Hey! I'm </span>
+            <span style={{ fontFamily: "Courgette, cursive", color: "mediumorchid" }}>Shinji  Morikage</span>
           </h1>
         </div>
         <div className="font-extralight text-base md:text-4xl dark:text-neutral-200 py-4">
