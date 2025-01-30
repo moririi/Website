@@ -5,6 +5,7 @@ import Loading from "./components/Header/Loading";
 import { CSSTransition } from "react-transition-group";
 import { AuroraBackgroundDemo } from "./components/Header/MainBackgroundAnim";
 import { AboutMe } from "./components/Introduction/Introduction";
+import Timeline from "./components/Timeline/Timeline";
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -42,6 +43,12 @@ export default function App() {
       {/* <Header /> */}
       <AuroraBackgroundDemo />
       <AboutMe />
+      <div
+        style={{ backgroundColor: "#41026e4f" }}
+        className="min-h-screen flex justify-center items-center"
+      >
+        <Timeline />
+      </div>
     </div>
   );
 }
