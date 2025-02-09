@@ -16,9 +16,19 @@ module.exports = {
         extralight: "200", // Extralight weight
       },
       animation: {
+        marquee: "marquee 20s linear infinite",
+        "marquee-reverse": "marquee-reverse 20s linear infinite",
         aurora: "aurora 60s linear infinite",
       },
       keyframes: {
+        marquee: {
+          from: { transform: "translateX(0%)" },
+          to: { transform: "translateX(-33.33%)" }, // ✅ Moves smoothly, NO RESET
+        },
+        "marquee-reverse": {
+          from: { transform: "translateX(-33.33%)" },
+          to: { transform: "translateX(0%)" },
+        },
         aurora: {
           from: {
             backgroundPosition: "50% 50%, 50% 50%",
