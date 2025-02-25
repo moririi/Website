@@ -5,7 +5,7 @@ import "./Introduction.css";
 export const AboutMe: React.FC = () => {
   // ✅ Define Tech Stack Icons
   const techStackTop = [
-    { name: "HTML", logo: "/icons/html.svg" },
+    { name: "HTML", logo: "/html-5-logo.svg" },
     { name: "CSS", logo: "/icons/css.svg" },
     { name: "JavaScript", logo: "/icons/javascript.svg" },
     { name: "TypeScript", logo: "/icons/typescript.svg" },
